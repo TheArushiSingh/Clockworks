@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clockworks</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Clockworks</h1>
+  </header>
+
+  <main>
+
+  
+    <article id="controls">
+
+      <section class="input-group">
+        <label for="minutes-input">Minutes</label>
+        <input type="number" id="minutes-input" placeholder="0" max="300" min="0">
+      </section>
+
+      <section class="input-group">
+        <label for="seconds-input">Seconds</label>
+        <input type="number" id="seconds-input" placeholder="0" max="59" min="0" step="5">
+      </section>
+
+      <section>
+      <button type="button" id="start-button" onclick="startTimer()">Start</button>
+      <button type="button" id="pause-button" onclick="pauseTimer()" disabled>Pause</button>
+      <button type="button" id="stop-button" disabled onclick="stopTimer()">Stop</button>
+      <button type="button" id="reset-button" onclick="resetTimer()">Reset</button>
+      </section>
+
+    </article>
+    
+    <article id="timer">
+      <section><p><span id="minutes">00</span>:<span id="seconds">00</span></p></section>
+    </article>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
